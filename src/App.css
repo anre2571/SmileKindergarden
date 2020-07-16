@@ -1,3 +1,67 @@
+.website{
+  height:97vh;
+  width:99vw;
+}
+.page{
+  background-color: #E5E5E5;
+  height:100%;
+  width:100%;
+  display: flex;
+  flex-direction: row;
+}
+.left_column, .middle_column, .right_column{
+  display: flex;
+  flex-direction: column;
+}
+.section{
+  width:200px;
+  height:200px;
+  background-color: deepskyblue;
+  margin:3px;
+}
+.right_column .section{
+  height:100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 .App {
   text-align: center;
 }
@@ -36,3 +100,4 @@
     transform: rotate(360deg);
   }
 }
+*/
