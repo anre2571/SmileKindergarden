@@ -1,103 +1,313 @@
 .website{
   height:97vh;
-  width:99vw;
+  width:100vw;
 }
 .page{
-  background-color: #E5E5E5;
+  background-color: #FAF6EF;
   height:100%;
   width:100%;
+}
+
+/*HEADER*/
+.header{
   display: flex;
   flex-direction: row;
+  align-items: stretch;
+  height:85px;
+}
+.headerItem{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#logo{
+  flex:1;
+  background-image: url("Images/logo.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+
+}
+#homepage_title{
+  flex:3;
+}
+#login_title{
+  flex:1;
+  background-color: #E5E5E5;
+  transition: 0.5s;
+}
+#campus_display{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height:100%;
+}
+#campus_title{
+  flex:1;
+  font-size: large;
+  font-weight: bold;
+}
+.campus_names{
+  flex: 1 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.campus_names:hover{
+  background-color: #9F9F9A !important;
+}
+.selected{
+  background-color: #F5B444;
+}
+
+/*PAGE CONTENTS*/
+.pageBody{
+  display: flex;
+  flex-direction: row;
+  height:90vh;
+
 }
 .left_column, .middle_column, .right_column{
   display: flex;
   flex-direction: column;
+  flex:1;
 }
-.section{
-  width:200px;
-  height:200px;
-  background-color: deepskyblue;
-  margin:3px;
-}
-.right_column .section{
-  height:100px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.middle_column{
+  flex:10;
   display: flex;
   flex-direction: column;
-  align-items: center;
+}
+.right_column {
+  flex:3
+}
+.left_column {
+  flex:2
+}
+.sub_column{
+  display: flex;
+  flex-direction: column;
+  flex:1;
+}
+.sub_row{
+  flex:1;
+  display: flex;
+  flex-direction: row;
+}
+.inner_sub_row{
+  flex:1;
+  display: flex;
+  flex-direction: row;
+}
+
+
+/*COLLECTIVE SECTION BLOCKS*/
+.section{
+  color:white;
+  font-weight: bold;
+  text-transform: uppercase;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  transition: 0.5s;
+}
+.section:hover{
+  opacity: 0.7;
+}
+#login_title:hover{
+
+  background-color: #9F9F9A !important;
+}
+
+/*INDIVIDUAL SECTION BLOCKS*/
+#News{
+ /* background-color: #80B856;*/
+  background-image: url("Images/news.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  flex:1;
+}
+#Announcements{
+ /* background-color: #0D559D;*/
+  background-image: url("Images/announcement_pattern.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  flex:1;
+}
+#PhotoAlbums{
+  flex:1;
+  background-image: url("Images/Photo.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#Schedule{
+ /* background-color: #F5B444;*/
+  background-image: url("Images/schedule_pattern.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  flex:1;
+}
+#RestaurantMenu{
+  /*background-color: #0D559D;*/
+  background-image: url("Images/rest_pattern.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  flex:1;
+}
+#Parent-ChildInteraction{
+  flex:1;
+  /*background-color: #F5B444;*/
+  background-image: url("Images/pc_pattern.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#Events{
+  /*background-color: #80B856;*/
+  background-image: url("Images/events.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  flex:1;
+  align-items: start;
+  padding-top: 40px;
+}
+#Courses{
+  /*background-color: #F5B444;*/
+  background-image: url("Images/courses_pattern.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  flex:1;
+}
+#Contact{
+  background-color: #80B856;
+  flex:2;
+}
+#Counselling{
+  /*background-color: #0D559D;*/
+  background-image: url("Images/announcement_pattern.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  flex:1;
+}
+
+
+/* CAROUSEL CSS*/
+#carousel_container{
+  flex:1;
+}
+* {box-sizing:border-box}
+/* Slideshow container */
+.slideshow-container {
+  width: 100%;
+  position: relative;
+  margin: 0;
+
+}
+/* Hide the images by default */
+.my_Slides {
+  display: none;
+  margin-bottom: -5px !important;
+
+}
+.carousel_images{
+  height: 400px;
+  max-height: 50%;
+
+}
+.shown{
+  display: block;
+}
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
   color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+.active, .dot:hover {
+  background-color: #717171;
+}
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
 }
 
-.App-link {
-  color: #61dafb;
+
+  /*CONTENT VIEW CSS*/
+.content_view{
+  background-color: #E5E5E5;
+  flex:1;
+}
+#close_btn{
+  margin:10px;
+  background-image: url("Images/close.png");
+  background-size: contain;
+  height: 30px;
+  width: 30px;
+  background-repeat: no-repeat;
+  float: right;
+}
+#content_text{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

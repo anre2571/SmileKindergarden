@@ -3,13 +3,14 @@ import '../App.css';
 
 function Section(props){
     function changeStyle(e) {
-        e.target.style.background = 'grey';
+        //e.target.style.background = 'grey';
     }
     function changeBack(e) {
-        e.target.style.background = 'deepskyblue';
+        //e.target.style.background = 'deepskyblue';
     }
+    let id = props.value.replace(/ /g,'');
     return(
-        <div className="section"  onMouseEnter={changeStyle} onMouseLeave={changeBack}>
+        <div id = {id} className="section"  onMouseEnter={changeStyle} onMouseLeave={changeBack} onClick={props.onClick}>
             {props.value}
         </div>
     );
